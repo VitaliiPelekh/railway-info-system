@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Search Results</title>
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Search Results</h1>
+
+<div class="container" th:if="${trains == null or trains.isEmpty()}">
+  <p>No trains found for the given criteria.</p>
+</div>
+
+<div class="container" th:if="${trains != null and !trains.isEmpty()}">
+  <table>
+    <thead>
+    <tr>
+      <th>Number</th>
+      <th>Destination</th>
+      <th>Departure Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="train : ${trains}">
+      <td th:text="${train.number}"></td>
+      <td th:text="${train.destination}"></td>
+      <td th:text="${train.departureTime}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<a href="/trains">Back to All Trains</a>
+</body>
+</html>

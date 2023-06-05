@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Trains by Number</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Search Trains by Number</h1>
+<form th:action="@{/trains/search}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <p>Train Number: <input type="text" name="number"/></p>
+    <p><input class="button" type="submit" value="Search by number"/></p>
+</form>
+</body>
+</html>

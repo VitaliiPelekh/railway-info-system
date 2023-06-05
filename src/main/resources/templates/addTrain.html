@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Train</title>
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Add Train</h1>
+<form th:action="@{/trains/add}" th:object="${train}" method="post">
+  <p>Train Number: <input type="text" th:field="*{number}"/></p>
+  <p>Destination: <input type="text" th:field="*{destination}"/></p>
+  <p>Departure Time: <input type="time" th:field="*{departureTime}"/></p>
+  <p><input class="button" type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>

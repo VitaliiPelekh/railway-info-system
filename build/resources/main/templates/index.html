@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Railway Information System</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Welcome to Railway Information System</h1>
+<nav>
+    <ul>
+        <li><a th:href="@{/trains}">View all trains</a></li>
+        <li><a th:href="@{/trains/add}">Add a train</a></li>
+        <li><a th:href="@{/trains/search}">Search for trains by number</a></li>
+        <li><a th:href="@{/trains/destination}">Search for trains by destination</a></li>
+    </ul>
+</nav>
+</body>
+</html>
